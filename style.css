@@ -1,0 +1,428 @@
+:root {
+  --glass-effect: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(180, 180, 180, 0.03) 5%,
+    rgba(32, 32, 32, 0.04) 6%,
+    rgba(109, 109, 109, 0.04) 7%,
+    rgba(206, 206, 206, 0.04) 8%,
+    rgba(31, 31, 31, 0.04) 9%,
+    rgba(0, 0, 0, 0.02) 10%,
+    rgba(0, 0, 0, 0) 11%,
+    rgba(0, 0, 0, 0) 13%,
+    rgba(0, 0, 0, 0.04) 15%,
+    rgba(190, 190, 190, 0.06) 16%,
+    rgba(255, 255, 255, 0.07) 17%,
+    rgba(255, 255, 255, 0.08) 21%,
+    rgba(18, 18, 18, 0.08) 22%,
+    rgba(56, 56, 56, 0.08) 23%,
+    rgba(157, 157, 157, 0.08) 24%,
+    rgba(242, 242, 242, 0.08) 25%,
+    rgba(30, 30, 30, 0.08) 26%,
+    rgba(27, 27, 27, 0.08) 27%,
+    rgba(120, 120, 120, 0.08) 28%,
+    rgba(186, 186, 186, 0.08) 29%,
+    rgba(253, 253, 253, 0.09) 30%,
+    rgba(252, 252, 252, 0.09) 31%,
+    rgba(248, 248, 248, 0.08) 34%,
+    rgba(243, 243, 243, 0.04) 37%,
+    rgba(0, 0, 0, 0.03) 38%,
+    rgba(6, 6, 6, 0.02) 39%,
+    rgba(30, 30, 30, 0.02) 43%,
+    rgba(54, 54, 54, 0.06) 47%,
+    rgba(254, 254, 254, 0.07) 48%,
+    rgba(253, 253, 253, 0.08) 51%,
+    rgba(11, 11, 11, 0.08) 52%,
+    rgba(0, 0, 0, 0.07) 53%,
+    rgba(0, 0, 0, 0.04) 55%,
+    rgba(242, 242, 242, 0.03) 56%,
+    rgba(255, 255, 255, 0.02) 57%,
+    rgba(236, 236, 236, 0) 58%,
+    rgba(217, 217, 217, 0.02) 59%,
+    rgba(197, 197, 197, 0.09) 60%,
+    rgba(158, 158, 158, 0.05) 62%,
+    rgba(0, 0, 0, 0.03) 63%,
+    rgba(51, 51, 51, 0.04) 64%,
+    rgba(112, 112, 112, 0.04) 65%,
+    rgba(189, 189, 189, 0.05) 66%,
+    rgba(236, 236, 236, 0.06) 67%,
+    rgba(254, 254, 254, 0.08) 68%,
+    rgba(218, 218, 218, 0.09) 69%,
+    rgba(182, 182, 182, 0.09) 70%,
+    rgba(36, 36, 36, 0.06) 74%,
+    rgba(19, 19, 19, 0.05) 75%,
+    rgba(62, 62, 62, 0.05) 76%,
+    rgba(114, 114, 114, 0.05) 77%,
+    rgba(178, 178, 178, 0.04) 78%,
+    rgba(218, 218, 218, 0.04) 79%,
+    rgba(255, 255, 255, 0.03) 80%,
+    rgba(154, 154, 154, 0.03) 81%,
+    rgba(0, 0, 0, 0.02) 82%,
+    rgba(48, 48, 48, 0.02) 83%,
+    rgba(85, 85, 85, 0.01) 84%,
+    rgba(161, 161, 161, 0.01) 85%,
+    rgba(254, 254, 254, 0) 86%,
+    rgba(0, 0, 0, 0) 89%,
+    rgba(255, 255, 255, 0) 91%,
+    rgba(191, 191, 191, 0.01) 92%,
+    rgba(204, 204, 204, 0.02) 93%,
+    rgba(112, 112, 112, 0.03) 94%,
+    rgba(67, 67, 67, 0.04) 95%,
+    rgba(25, 25, 25, 0.04) 96%,
+    rgba(0, 0, 0, 0.03) 97%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  --tint: cornflowerblue
+}
+
+body {
+  font-size: 13px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(236, 236, 236) 100%);
+}
+
+.aero-glass {
+  position: absolute;
+  border: 1px solid rgba(255 255 255 / 0.725);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 2px 0px 0px 7px;
+
+  background-color: var(--tint, rgba(0, 120, 215, 0.3)); /* semi-transparent! */
+  text-shadow: 
+  0px 0px 12px #FFFFFF,
+  0px 0px 10px #dff1f8e3,
+  0px 0px 6px #FFFFFF,
+  0px 0px 3px #FFFFFF;
+
+  backdrop-filter: blur(7px) brightness(1.25);
+  -webkit-backdrop-filter: blur(7px) brightness(1.25);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255 255 255 / 0.5),
+    0 0 10px rgba(0 0 0 / 0.75);
+
+  background-image: var(--glass-effect);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  transform: translateZ(0);
+
+  transition: background-color 125ms ease-in-out;
+  will-change: backdrop-filter, background-color;
+
+  z-index: 2;
+  position: relative; /* for ::before */
+}
+
+.aero-glass::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255 255 255 / 0) 6%,
+    rgba(255 255 255 / 0.7) 14%,
+    rgba(255 255 255 / 0) 28%
+  );
+}
+
+.aero-glass:hover {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+    0 0 12px var(--tint),
+    0 0 6px rgba(0, 0, 0, 0.75);
+}
+
+
+.box {
+  position: absolute;
+  bottom: 7px;
+  width: calc(100% - 16px);
+  height: calc(100% - 74px);
+  border: 1px double #000;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 
+  0px 0px 00px #ffffff00;
+  background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(236, 236, 236) 100%);
+  overflow: scroll;
+
+}
+
+.titlebuttons {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+
+.danger-button {
+  background-color: rgba(227, 135, 123);
+  width: 55px;
+  color: white;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.666px rgb(0, 0, 0);
+  border-radius: 4px;
+  border: 1px double rgb(241, 167, 157);
+  background-image: linear-gradient(180deg, rgba(227, 135, 123) 50%, #ba3422 50%);
+  transition: box-shadow 0.2s ease;
+  padding: 0px;
+}
+
+.danger-button:hover {
+  box-shadow: 0px 0px 12px #e74d38, 0px 0px 9px #e74d38, 0px 0px 5px #e74d38;
+}
+
+.danger-button:active {
+  box-shadow: 0px 0px 15px #e2361f, 0px 0px 12px #e74d38, 0px 0px 9px #e74d38;
+}
+
+.important-button {
+  background-color: var(--tint);
+  width: 30px;
+  color: white;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.666px rgb(0, 0, 0);
+  border-radius: 4px;
+  border: 1px double black;
+  background-image: linear-gradient(180deg, color-mix(in srgb, var(--tint) 65%, #fff 35%) 50%, var(--tint) 50%);
+  transition: background-image 0.2s ease, box-shadow 0.2s ease;
+}
+
+.important-button:hover {
+  box-shadow: 0px 0px 12px var(--tint), 0px 0px 9px var(--tint), 0px 0px 5px var(--tint);
+  background-image: linear-gradient(180deg, color-mix(in srgb, var(--tint) 55%, #fff 45%) 50%, color-mix(in srgb, var(--tint) 83%, #fff 17%) 50%);
+}
+
+.important-button:active {
+  box-shadow: 0px 0px 15px var(--tint), 0px 0px 12px var(--tint), 0px 0px 9px #fff;
+}
+
+.boxed-search-bar {
+  position: absolute ;
+  top: 34px;
+  right: 10px;
+  width: 33%;
+  opacity: .6;
+  background-color: #fff;
+  backdrop-filter: blur(2px);
+  color: #000;
+  border-radius: 3px;
+  border: 1px double black;
+}
+
+.boxed-search-bar:focus {
+  opacity: 1;
+  background-color: #fff;
+  color: #000;
+  border-radius: 3px;
+  border: 1px double black;
+  outline: none;
+}
+
+.top-bar {
+  width: 100%;
+  min-height: 36px;
+  border-bottom: 1px double color-mix(in srgb, var(--tint) , #000000a4 30%);
+  background-image: linear-gradient(0deg, color-mix(in srgb, var(--tint) , #fff 80%) 50%,  color-mix(in srgb, var(--tint) , #fff 90%) 50%)
+}
+
+.top-bar button {
+  background-color: rgba(255, 255, 255, 0);
+  margin: 2px;
+  border-radius: 6px;
+  height: 32px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  min-width: 64px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.top-bar button:hover {
+  border: 1px double var(--tint);
+}
+
+.top-bar button:active {
+  border: 1px double var(--tint);
+  box-shadow: inset 0px 0px 10px var(--tint, rgba(0, 0, 0, 0.5));
+}
+
+.bottom-bar {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  min-height: 45px;
+  background-color: #e4e4e4;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.glass-simmer {
+  animation: shimmer 12s linear infinite;
+  background-size: 300% 300%;
+}
+
+.resizable {
+  resize: both;
+  overflow: auto;
+  min-width: 200px;
+  min-height: 150px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--tint);
+  border-radius: 4px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: relative;
+  animation: spin 0.9s linear infinite;
+
+  /* Base ring with soft transparency */
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 270deg,
+    var(--tint) 270deg 360deg
+  );
+
+  /* Glassy reflection ring */
+  box-shadow:
+    inset 0 0 4px rgba(255, 255, 255, 0.2),
+    0 0 4px rgba(0, 0, 0, 0.3),
+    0 0 8px rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+/* Add a reflection on top */
+.spinner::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 80%;
+  height: 40%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.35), transparent);
+  border-radius: 50%;
+  filter: blur(0.8px);
+  transform: rotate(-25deg);
+  pointer-events: none;
+}
+
+/* Add a soft shadow highlight at the bottom */
+.spinner::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 60%;
+  height: 30%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.12), transparent);
+  border-radius: 50%;
+  filter: blur(1.2px);
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+/* Rotation animation */
+@keyframes spin {
+  0%   { transform: rotate(0turn); }
+  100% { transform: rotate(1turn); }
+}
+
+.loading-bar-container {
+  width: 100%;
+  max-width: 300px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 0 5px rgba(255, 255, 255, 0.3),
+    0 0 4px rgba(0, 0, 0, 0.4);
+  background-image: var(--glass-effect);
+  background-blend-mode: overlay;
+  backdrop-filter: blur(4px) brightness(1.2);
+  -webkit-backdrop-filter: blur(4px) brightness(1.2);
+  overflow: hidden;
+  margin: 10px auto;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(
+    to right,
+    rgb(11, 161, 11) 0%,
+    rgb(51, 231, 51) 100%
+  );
+  box-shadow:
+    inset 0 0 8px rgba(255, 255, 255, 0.5),
+    0 0 8px var(--tint),
+    0 0 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  animation: loadingBarAnim 10s ease-in;
+  background-size: 200% auto;
+}
+
+
+.aero-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(0);
+  border-radius: 12px;
+  z-index: 999;
+  filter: drop-shadow(100px 100px 20px #00000080);
+  animation: popupFadeIn 0.25s ease-out;
+}
+
+/* Entrance animation */
+@keyframes popupFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.aero-glass.collapsed .box {
+  display: none;
+}
+
+.aero-glass.collapsed {
+  height: auto !important;
+  min-height: 50px; /* Just enough for the title and buttons */
+}
